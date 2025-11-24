@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gestión de Imágenes"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/dorado_secundario"
+        android:paddingBottom="12dp"/>
+
+    <TextView
+        android:id="@+id/tvEstado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total imágenes: 0"
+        android:paddingBottom="8dp"/>
+
+    <CheckBox
+        android:id="@+id/chkNuevaPrincipal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nueva como principal"/>
+
+    <Button
+        android:id="@+id/btnSubirImagen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Subir Imagen"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/dorado_secundario"
+        android:textColor="@android:color/white"/>
+
+    <Button
+        android:id="@+id/btnRefrescar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Refrescar"
+        android:layout_marginTop="6dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerImagenes"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="12dp"/>
+
+</LinearLayout>

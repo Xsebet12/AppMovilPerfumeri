@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:padding="16dp"
+    android:background="@color/white"
+    android:forceDarkAllowed="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Space
+            android:id="@+id/spaceTopCrear"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+
+        <TextView
+            android:id="@+id/tvTituloCrear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Crear Producto"
+            android:textColor="@color/dorado_secundario"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:paddingBottom="12dp"/>
+
+        <!-- Datos básicos -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Datos básicos"
+            android:textColor="@color/dorado_secundario"
+            android:textStyle="bold"
+            android:paddingBottom="4dp"/>
+        <EditText
+            android:id="@+id/etSku"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="SKU"
+            android:inputType="textCapCharacters"
+            android:layout_marginBottom="10dp"/>
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre Producto"
+            android:inputType="textCapWords"
+            android:layout_marginBottom="10dp"/>
+        <EditText
+            android:id="@+id/etDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Descripción"
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:gravity="top|start"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Características físicas -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Características"
+            android:textColor="@color/dorado_secundario"
+            android:textStyle="bold"
+            android:paddingBottom="4dp"/>
+        <EditText
+            android:id="@+id/etMl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Mililitros (ml)"
+            android:inputType="number"
+            android:layout_marginBottom="10dp"/>
+        <EditText
+            android:id="@+id/etPresentacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Presentación (Spray / Roll-on)"
+            android:inputType="textCapWords"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Inventario y precios -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Inventario y Precios"
+            android:textColor="@color/dorado_secundario"
+            android:textStyle="bold"
+            android:paddingBottom="4dp"/>
+        <EditText
+            android:id="@+id/etStock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Stock inicial"
+            android:inputType="number"
+            android:layout_marginBottom="10dp"/>
+        <EditText
+            android:id="@+id/etCostoReferencia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Costo Referencia"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="10dp"/>
+        <EditText
+            android:id="@+id/etPrecioDetalle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Precio Detalle"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="10dp"/>
+        <EditText
+            android:id="@+id/etPrecioVip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Precio VIP"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="10dp"/>
+        <EditText
+            android:id="@+id/etPrecioMayorista"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Precio Mayorista"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="14dp"/>
+
+        <!-- Categoría y marca -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clasificación"
+            android:textColor="@color/dorado_secundario"
+            android:textStyle="bold"
+            android:paddingBottom="4dp"/>
+        <Spinner
+            android:id="@+id/spCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"/>
+        <Spinner
+            android:id="@+id/spBrand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Imágenes (solo creación; en edición se ocultan) -->
+        <TextView
+            android:id="@+id/tvLabelImagenes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Imágenes"
+            android:textColor="@color/dorado_secundario"
+            android:textStyle="bold"
+            android:paddingBottom="4dp"/>
+        <Button
+            android:id="@+id/btnPickImages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Seleccionar imágenes"
+            android:layout_marginBottom="10dp"
+            style="@style/AppButton.Gold"/>
+        <Button
+            android:id="@+id/btnElegirPrincipal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Elegir imagen principal"
+            style="@style/AppButton.Gold"/>
+        <Spinner
+            android:id="@+id/spPrincipal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"
+            android:prompt="@string/sp_principal_prompt" />
+        <TextView
+            android:id="@+id/tvPrincipalInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="6dp"
+            android:text="Principal: (ninguna)"
+            android:textColor="@color/black"
+            android:layout_marginBottom="14dp"/>
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Crear"
+            style="@style/AppButton.Gold"/>
+        <Button
+            android:id="@+id/btnEliminarProducto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Eliminar Producto"
+            android:visibility="gone"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="12dp"/>
+
+        <!-- Espacio extra inferior para permitir scroll sobre teclado -->
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="48dp" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

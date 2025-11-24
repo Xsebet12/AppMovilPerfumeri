@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Replicar paleta clara para modo noche evitando inversión -->
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="black_100">#111111</color>
+    <color name="black_150">#161616</color>
+    <color name="black_200">#1A1A1A</color>
+    <color name="black_250">#1F1F1F</color>
+    <color name="black_300">#222222</color>
+    <color name="black_350">#272727</color>
+    <color name="black_400">#2C2C2C</color>
+    <color name="black_450">#303030</color>
+    <color name="black_500">#333333</color>
+    <color name="dorado_secundario">#D4AF37</color>
+    <color name="dorado_oscuro">#A8891E</color>
+    <color name="morado_terciario">#6A0DAD</color>
+    <color name="gris_item">#C9C9C9</color>
+    <color name="estado_ok">#2E7D32</color>
+    <color name="estado_no">#C62828</color>
+</resources>

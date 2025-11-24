@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">your fragrance</string>
+    <string name="sp_principal_prompt">Seleccionar imagen principal</string>
+    <string name="titulo_ordenes">Órdenes</string>
+    <string name="filtro_estado_pago">Filtrar por estado de pago</string>
+    <string name="orden_numero">Orden</string>
+    <string name="estado_pago">Estado de pago</string>
+    <string name="cliente_label">Cliente</string>
+    <string name="fecha_label">Fecha</string>
+    <string name="estado_envio">Estado de envío</string>
+    <string name="ver_resumen">Ver resumen</string>
+    <string name="aceptar_pago">Aceptar pago</string>
+    <string name="rechazar_pago">Rechazar pago</string>
+    <string name="marcar_enviado">Marcar despachado</string>
+    <string name="marcar_entregado">Marcar entregado</string>
+    <string name="numero_seguimiento">Número de seguimiento</string>
+    <string name="fecha_estimada_entrega">Fecha estimada de entrega</string>
+    <string name="actualizar_seguimiento">Actualizar seguimiento</string>
+    <string name="titulo_actualizar_seguimiento">Actualizar envío</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="guardar">Guardar</string>
+    <string name="sin_ordenes">Sin órdenes para el estado seleccionado</string>
+</resources>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="34dp" />
+
+    <TextView
+        android:id="@+id/tvVentaId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Venta #"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/tvMetodoPago"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Metodo"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/tvCanal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Canal"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/tvEstado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Estado"
+        android:textColor="@color/black"/>
+
+    <LinearLayout
+        android:id="@+id/contenedorSeguimiento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:id="@+id/tvEstadoEnvio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/estado_envio"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tvNumeroSeguimiento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/numero_seguimiento"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tvFechaEstimada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fecha_estimada_entrega"
+            android:textColor="@color/black"/>
+
+        <Button
+            android:id="@+id/btnActualizarSeguimiento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/actualizar_seguimiento"
+            android:layout_marginTop="6dp"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerDetalles"
+        android:layout_width="257dp"
+        android:layout_height="408dp"
+        android:layout_marginTop="12dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/tvTotalVenta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="$0"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:textColor="@color/dorado_secundario"/>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="34dp" />
+</LinearLayout>

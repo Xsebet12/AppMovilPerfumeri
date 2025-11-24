@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="12dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/titulo_actualizar_seguimiento"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:paddingBottom="8dp"/>
+
+    <Spinner
+        android:id="@+id/spEstadoEnvio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/estado_envio_options"
+        android:prompt="@string/estado_envio"/>
+
+    <EditText
+        android:id="@+id/etNumeroSeguimiento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/numero_seguimiento"
+        android:inputType="text"
+        android:layout_marginTop="8dp"/>
+
+    <EditText
+        android:id="@+id/etFechaEstimada"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/fecha_estimada_entrega"
+        android:inputType="date"
+        android:layout_marginTop="8dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:layout_marginTop="12dp">
+
+        <Button
+            android:id="@+id/btnCancelar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancelar"
+            android:layout_marginRight="8dp"/>
+
+        <Button
+            android:id="@+id/btnGuardar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/guardar"/>
+    </LinearLayout>
+
+</LinearLayout>

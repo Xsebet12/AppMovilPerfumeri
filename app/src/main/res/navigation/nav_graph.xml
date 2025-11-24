@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.apptest.ui.cliente.HomeFragment"
+        android:label="Home" />
+
+    <fragment
+        android:id="@+id/homeAdminFragment"
+        android:name="com.example.apptest.ui.empleado.HomeAdminFragment"
+        android:label="HomeAdmin">
+        <action
+            android:id="@+id/action_homeAdminFragment_to_manageUsersFragment"
+            app:destination="@id/manageUsersFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.apptest.ui.cliente.ProfileFragment"
+        android:label="Perfil" />
+
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.example.apptest.ui.cliente.CartFragment"
+        android:label="Carrito" />
+
+    <fragment
+        android:id="@+id/adminProductDetailFragment"
+        android:name="com.example.apptest.ui.empleado.AdminProductDetailFragment"
+        android:label="Detalle producto (Admin)">
+        <argument
+            android:name="product_id"
+            app:argType="long" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/manageUsersFragment"
+        android:name="com.example.apptest.ui.empleado.ManageUsersFragment"
+        android:label="Usuarios">
+        <action
+            android:id="@+id/action_manageUsersFragment_to_homeAdminFragment"
+            app:destination="@id/homeAdminFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/userDetailFragment"
+        android:name="com.example.apptest.ui.empleado.UserDetailFragment"
+        android:label="Detalle Usuario">
+        <argument
+            android:name="cliente_id"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/manageOrdersFragment"
+        android:name="com.example.apptest.ui.empleado.ManageOrdersFragment"
+        android:label="Órdenes" />
+
+</navigation>

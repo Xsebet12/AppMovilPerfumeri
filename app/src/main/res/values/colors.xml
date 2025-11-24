@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Paleta base solicitada -->
+    <color name="negro_principal">#000000</color>
+    <color name="negro_900">#121212</color>
+    <color name="dorado_secundario">#D4AF37</color>
+    <color name="dorado_oscuro">#A8891E</color>
+    <color name="morado_terciario">#6A0DAD</color>
+    <color name="gris_item">#C9C9C9</color>
+    <color name="gray">#808080</color>
+
+    <!-- Dejar colores comunes para compatibilidad y textos -->
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+    <!-- Escala adicional de negros/grises profundos para textos sobre blanco -->
+    <color name="black_100">#111111</color>
+    <color name="black_150">#161616</color>
+    <color name="black_200">#1A1A1A</color>
+    <color name="black_250">#1F1F1F</color>
+    <color name="black_300">#222222</color>
+    <color name="black_350">#272727</color>
+    <color name="black_400">#2C2C2C</color>
+    <color name="black_450">#303030</color>
+    <color name="black_500">#333333</color>
+
+    <!-- Mantener antiguos por compatibilidad si algún layout los usa -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#6A0DAD</color>
+    <color name="purple_700">#4C0781</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <!-- Estados producto -->
+    <color name="estado_ok">#2E7D32</color>
+    <color name="estado_no">#C62828</color>
+    <!-- Botones dorados UI usuario -->
+    <color name="boton_dorado">#D4AF37</color>
+</resources>

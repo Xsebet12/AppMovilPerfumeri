@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    
+    <!-- Disable dark mode forced color inversion -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:visibility="gone"
+        android:forceDarkAllowed="false"
+        android:layout_width="0dp"
+        android:layout_height="0dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="4dp" />
+
+        <TextView
+            android:id="@+id/tvHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Panel Admin"
+            android:textStyle="bold"
+            android:textColor="@color/dorado_secundario"
+            android:textSize="20sp"
+            android:paddingBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/etSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Buscar"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textColorHint="@color/dorado_oscuro"
+            android:backgroundTint="@color/dorado_secundario"/>
+
+        <Spinner
+            android:id="@+id/spOrden"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="8dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabCrearProducto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        app:backgroundTint="@color/dorado_secundario"
+        app:srcCompat="@android:drawable/ic_input_add"
+        app:tint="@color/white"/>
+
+</FrameLayout>

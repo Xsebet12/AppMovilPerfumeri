@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/progress"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="44dp" />
+
+        <TextView
+            android:id="@+id/tvTituloAdminDetalle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detalle Producto (Admin)"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/dorado_secundario"
+            android:layout_marginBottom="12dp" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/pagerImagenes"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:layout_marginBottom="8dp" />
+        <TextView
+            android:id="@+id/tvPagerIndicador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0/0"
+            android:textColor="@color/black"
+            android:layout_marginBottom="12dp"/>
+
+        <TextView
+            android:id="@+id/tvNombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tvSku"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tvDescripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tvMlPresentacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tvMarca"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tvCategoria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tvDisponibleHabilitado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black" />
+        <TextView
+            android:id="@+id/tvStock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tvPrecioDetalle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tvPrecioVip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tvPrecioMayorista"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tvCosto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black" />
+        <TextView
+            android:id="@+id/tvCategoriaId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/black" />
+        <TextView
+            android:id="@+id/tvMarcaId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/btnModificarAdmin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Modificar Producto"
+            android:layout_marginTop="20dp"
+            style="@style/AppButton.Gold"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnModificarImagenes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Modificar Imágenes"
+            android:layout_marginTop="12dp"
+            style="@style/AppButton.Gold"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnHabilitarDeshabilitar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Habilitar / Deshabilitar"
+            android:layout_marginTop="12dp"
+            style="@style/AppButton.Gold"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</ScrollView>

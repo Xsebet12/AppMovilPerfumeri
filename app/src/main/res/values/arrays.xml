@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="estado_pago_filtro">
+        <item>Pendientes</item>
+        <item>Aceptadas</item>
+        <item>Rechazadas</item>
+        <item>Despachadas</item>
+        <item>Entregadas</item>
+    </string-array>
+    <string-array name="estado_envio_options">
+        <item>preparando</item>
+        <item>despachado</item>
+        <item>entregado</item>
+        <item>rechazado</item>
+    </string-array>
+</resources>

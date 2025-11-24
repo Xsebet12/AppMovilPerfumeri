@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="@android:color/transparent">
+
+    <TextView
+        android:id="@+id/tvNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Producto"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="16sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="6dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tvPrecioUnitario"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="$0"
+            android:textColor="@color/dorado_secundario"/>
+
+        <TextView
+            android:id="@+id/tvSubtotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$0"
+            android:textColor="@color/dorado_secundario"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:layout_marginTop="6dp">
+
+        <Button
+            android:id="@+id/btnMenos"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="-"
+            android:textStyle="bold"
+            style="@style/AppButton.Gold"/>
+
+        <EditText
+            android:id="@+id/etCantidad"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center"
+            android:inputType="number"
+            android:text="1"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/dorado_secundario"/>
+
+        <Button
+            android:id="@+id/btnMas"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="+"
+            android:textStyle="bold"
+            style="@style/AppButton.Gold"/>
+
+        <Button
+            android:id="@+id/btnEliminar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Eliminar"
+            android:layout_marginStart="8dp"
+            style="@style/AppButton.Gold"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="#22FFFFFF"/>
+</LinearLayout>

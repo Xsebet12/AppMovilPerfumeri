@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="16dp"
+    android:forceDarkAllowed="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Space
+            android:id="@+id/spaceTopPerfil"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"/>
+
+        <TextView
+            android:id="@+id/tvTituloEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Editar Perfil"
+            android:textColor="@color/dorado_secundario"
+            android:textSize="22sp"
+            android:textStyle="bold"/>
+
+        <Space android:layout_width="match_parent" android:layout_height="12dp" />
+
+        <!-- Datos solo informativos para empleado -->
+        <TextView
+            android:id="@+id/tvRutInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black_300"
+            android:textStyle="bold"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/tvCreadoInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black_400"
+            android:visibility="gone"/>
+        <Space android:layout_width="match_parent" android:layout_height="8dp" />
+
+        <EditText
+            android:id="@+id/etPrimerNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Primer nombre"
+            android:inputType="textPersonName"
+            android:textColor="@color/black"
+            android:textColorHint="@color/dorado_oscuro" />
+        <EditText
+            android:id="@+id/etSegundoNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Segundo nombre (opcional)"
+            android:inputType="textPersonName"
+            android:textColor="@color/black"
+            android:textColorHint="@color/dorado_oscuro" />
+        <EditText
+            android:id="@+id/etApellidoPaterno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Apellido paterno"
+            android:inputType="textPersonName"
+            android:textColor="@color/black"
+            android:textColorHint="@color/dorado_oscuro" />
+        <EditText
+            android:id="@+id/etApellidoMaterno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Apellido materno (opcional)"
+            android:inputType="textPersonName"
+            android:textColor="@color/black"
+            android:textColorHint="@color/dorado_oscuro" />
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email contacto"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/black"
+            android:textColorHint="@color/dorado_oscuro" />
+        <EditText
+            android:id="@+id/etPasswordNueva"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nueva contraseña (opcional)"
+            android:inputType="textPassword"
+            android:textColor="@color/black"
+            android:textColorHint="@color/dorado_oscuro" />
+
+        <EditText
+            android:id="@+id/etTelefono"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Teléfono contacto (opcional)"
+            android:inputType="phone"
+            android:textColor="@color/black"
+            android:textColorHint="@color/dorado_oscuro" />
+
+        <EditText
+            android:id="@+id/etNombreCalle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre calle"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textColorHint="@color/dorado_oscuro" />
+        <EditText
+            android:id="@+id/etNumeroCalle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Número calle"
+            android:inputType="number"
+            android:textColor="@color/black"
+            android:textColorHint="@color/dorado_oscuro" />
+
+        <Spinner
+            android:id="@+id/spRegion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Spinner
+            android:id="@+id/spComuna"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Space android:layout_width="match_parent" android:layout_height="12dp" />
+
+        <Button
+            android:id="@+id/btnGuardarCambios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Guardar Cambios"
+            android:textColor="@color/black"
+            android:background="@drawable/bg_boton_morado" />
+
+        
+
+        <ProgressBar
+            android:id="@+id/pbGuardando"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:visibility="gone" />
+        <TextView
+            android:id="@+id/tvEstado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginTop="8dp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</ScrollView>
