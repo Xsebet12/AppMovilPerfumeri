@@ -20,14 +20,14 @@ Aplicación móvil Android desarrollada en Kotlin para una plataforma de e-comme
 ### Configuración Android
 
 1. **Requisitos Previos:**
-   - Android Studio Flamingo o superior
+   - Android Studio
    - JDK 21 instalado
    - Android SDK con API nivel 24+ 
    - Dispositivo físico o emulador Android
 
 2. **Clonar y Configurar Proyecto:**
    ```bash
-   git clone <url-del-repositorio>
+   git clone [<url-del-repositorio>](https://github.com/Xsebet12/AppMovilPerfumeria)
    cd AppMovilPerfumeria
    ```
 
