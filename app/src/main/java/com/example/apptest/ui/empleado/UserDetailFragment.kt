@@ -183,8 +183,16 @@ class UserDetailFragment: Fragment() {
     private fun toggleHabilitado() {
         val id = cliente?.id ?: return
         viewLifecycleOwner.lifecycleScope.launch {
-            repo.actualizarHabilitado(id, cliente?.habilitado != true).onSuccess { c ->
+            val nuevo = cliente?.habilitado != true
+            repo.actualizarHabilitado(id, nuevo).onSuccess { c ->
                 cliente = c
+                val tv = view?.findViewById<TextView>(R.id.tvEstadoDetalle)
+                tv?.text = if (c.habilitado == true) "Habilitado" else "Bloqueado"
+                android.widget.Toast.makeText(
+                    requireContext(),
+                    if (c.habilitado == true) "Cliente habilitado" else "Cliente bloqueado",
+                    android.widget.Toast.LENGTH_SHORT
+                ).show()
             }
         }
     }

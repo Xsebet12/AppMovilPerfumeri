@@ -48,26 +48,25 @@ class PurchaseHistoryActivity : ComponentActivity() {
                 val servicio = ApiClient.getRetrofit(this@PurchaseHistoryActivity).create(XanoVentaService::class.java)
                 val userId = SessionManager.getInstance(this@PurchaseHistoryActivity).getUser()?.id
                 if (userId == null) {
-                    // No hay usuario en sesión; cerrar la pantalla silenciosamente
                     Log.w("Historial", "Usuario no encontrado en sesión; se cierra la actividad")
-                    finish()
-                    return@launch
+                    finish(); return@launch
                 }
-                Log.d("Historial", "Solicitando historial para userId=$userId")
                 val lista = servicio.historialComprasCliente(userId)
-                Log.d("Historial", "Respuesta historial size=${lista.size}")
                 val planos = flatten(lista)
-                Log.d("Historial", "Items planos size=${planos.size}")
                 items.clear(); items.addAll(planos)
                 adapter.update(items)
-                // Fallback por si DiffUtil no refresca (no debería pasar)
-                binding.recyclerHistorial.post {
-                    adapter.notifyDataSetChanged()
-                    Log.d("Historial", "notifyDataSetChanged ejecutado. Total items=${adapter.itemCount}")
+                binding.recyclerHistorial.post { adapter.notifyDataSetChanged() }
+            } catch (e: Exception) {
+                val msg = when (e) {
+                    is retrofit2.HttpException -> {
+                        val raw = e.response()?.errorBody()?.string()?.trim().orEmpty()
+                        if (raw.isNotBlank()) raw else "Error del servidor al obtener historial"
+                    }
+                    else -> e.message ?: "Error al obtener historial"
                 }
-            } catch (_: Exception) {
-                Log.e("Historial", "Error obteniendo historial" )
-                finish()
+                android.widget.Toast.makeText(this@PurchaseHistoryActivity, msg, android.widget.Toast.LENGTH_LONG).show()
+                Log.e("Historial", "Error obteniendo historial: ${msg}")
+                // Mantener pantalla para que el usuario vea el mensaje y pueda volver manualmente
             }
         }
     }

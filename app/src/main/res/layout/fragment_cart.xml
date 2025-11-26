@@ -40,7 +40,7 @@
             android:id="@+id/btnPagar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Pagar"
+            android:text="Solicitar Envió"
             style="@style/AppButton.Gold" />
 
         <ProgressBar

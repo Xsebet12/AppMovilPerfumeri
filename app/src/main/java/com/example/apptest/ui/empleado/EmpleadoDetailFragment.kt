@@ -178,7 +178,17 @@ class EmpleadoDetailFragment: Fragment() {
     private fun toggleHabilitado() {
         val id = empleado?.id ?: return
         viewLifecycleOwner.lifecycleScope.launch {
-            repo.actualizar(id, mapOf("habilitado" to (empleado?.habilitado != true))).onSuccess { e -> empleado = e }.onFailure { }
+            val nuevo = empleado?.habilitado != true
+            repo.actualizar(id, mapOf("habilitado" to nuevo)).onSuccess { e ->
+                empleado = e
+                val tv = view?.findViewById<TextView>(R.id.tvEstadoDetalle)
+                tv?.text = if (e.habilitado == true) "Habilitado" else "Bloqueado"
+                android.widget.Toast.makeText(
+                    requireContext(),
+                    if (e.habilitado == true) "Empleado habilitado" else "Empleado bloqueado",
+                    android.widget.Toast.LENGTH_SHORT
+                ).show()
+            }.onFailure { }
         }
     }
 

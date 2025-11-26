@@ -65,8 +65,6 @@ class ProductDetailActivity : ComponentActivity() {
         binding.tvCategoria.text = item.nombre_categoria?.let { "Categoría: $it" } ?: ""
         val descCompuesta = buildString {
             if (!item.descripcion.isNullOrBlank()) append(item.descripcion)
-            if (item.ml != null) { if (isNotEmpty()) append(" • "); append("${item.ml} ml") }
-            if (!item.presentacion.isNullOrBlank()) { if (isNotEmpty()) append(" • "); append(item.presentacion) }
         }
         binding.tvDescripcion.text = if (descCompuesta.isBlank()) "Sin descripción" else descCompuesta
         binding.tvPresentacion.text = item.presentacion?.let { "Presentación: $it" } ?: ""
