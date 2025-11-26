@@ -27,7 +27,7 @@ Aplicación móvil Android desarrollada en Kotlin para una plataforma de e-comme
 
 2. **Clonar y Configurar Proyecto:**
    ```bash
-   git clone [<url-del-repositorio>](https://github.com/Xsebet12/AppMovilPerfumeria)
+   git clone https://github.com/Xsebet12/AppMovilPerfumeria.git
    cd AppMovilPerfumeria
    ```
 
@@ -53,7 +53,6 @@ La aplicación utiliza Xano como backend. No se requiere configuración local de
 **URLs de Xano Configuradas:**
 - **API Principal:** `https://x8ki-letl-twmt.n7.xano.io/api:cGjNNLgz/`
 - **API Autenticación:** `https://x8ki-letl-twmt.n7.xano.io/api:NUzxXGzL/`
-- **API Regiones/Comunas:** `https://x8ki-letl-twmt.n7.xano.io/api:cGjNNLgz/`
 
 ## 🔧 Variables/URLs Necesarias
 
@@ -61,7 +60,6 @@ La aplicación utiliza Xano como backend. No se requiere configuración local de
 
 ```kotlin
 buildConfigField("String", "XANO_BASE_URL", "https://x8ki-letl-twmt.n7.xano.io/api:cGjNNLgz/")
-buildConfigField("String", "XANO_REGCOMUNA_BASE_URL", "https://x8ki-letl-twmt.n7.xano.io/api:cGjNNLgz/")
 buildConfigField("String", "XANO_AUTH_BASE_URL", "https://x8ki-letl-twmt.n7.xano.io/api:NUzxXGzL/")
 ```
 
@@ -82,6 +80,11 @@ defaultConfig {
 ### Usuario Administrador
 - **Email:** admin@perfumeria.com
 - **Contraseña:** admin123
+- **Funcionalidades:** Gestión de productos, clientes, pedidos y imágenes
+
+### Usuario Owner
+- **Email:** owner@perfumeria.com
+- **Contraseña:** owner123
 - **Funcionalidades:** Gestión de productos, usuarios, pedidos y imágenes
 
 ### Usuario Cliente
@@ -101,7 +104,10 @@ defaultConfig {
 1. **Almacenamiento Backend:**
    - Las imágenes de productos se almacenan en Xano
    - URLs generadas automáticamente por la plataforma
-   - Formato: `https://x8ki-letl-twmt.n7.xano.io/api:cGjNNLgz/_file/<image_id>`
+   - Formato: `https://x8ki-letl-twmt.n7.xano.io/vault/`
+   - Subido a traves de api:
+      -`https://x8ki-letl-twmt.n7.xano.io/api:cGjNNLgz/producInv`
+      -`https://x8ki-letl-twmt.n7.xano.io/api:cGjNNLgz/producto_imagen`
 
 2. **Caché Local:**
    - La aplicación utiliza `CatalogCache` para cachear imágenes
@@ -110,14 +116,13 @@ defaultConfig {
 
 3. **Gestión de Imágenes:**
    - Administradores pueden subir/editar imágenes desde la app
-   - Client-side: Glide/Picasso para carga eficiente
    - Validación de formatos y tamaños
 
 ### Estructura de Imágenes en Xano
 
 - **Tabla:** `producto_imagen`
 - **Relación:** Many-to-One con productos
-- **Campos:** id, producto_id, imagen_url, orden, fecha_creacion
+- **Campos:** id, producto_id, imagen_url, imagen_principal, fecha_creacion
 
 ## 🚀 Funcionalidades Principales
 
@@ -233,29 +238,3 @@ jvmTarget = "21"
 
 4. **Imágenes no cargan:**
    - Verificar permisos internet
-   - Revisar configuración CacheManager
-
-### Logs y Debug
-
-- HTTP Logging Interceptor activado en debug
-- Logs detallados de requests/responses
-- SessionManager logs para seguimiento autenticación
-
-## 📞 Soporte
-
-Para issues técnicos o preguntas sobre:
-- Configuración del proyecto
-- Integración con Xano  
-- Problemas de build/ejecución
-- Funcionalidades específicas
-
-Contactar al equipo de desarrollo con:
-- Capturas de pantalla del error
-- Logs de Android Studio
-- Pasos para reproducir el issue
-
----
-
-**Última Actualización:** 2024-12-01  
-**Versión:** 1.0  
-**Estado:** Production Ready
